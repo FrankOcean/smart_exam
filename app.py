@@ -258,13 +258,3 @@ def cheat_detect():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=port, debug=True)  # 项目入口
-
-# 使用：python app.py
-# 上传图片网页：http://202.200.84.53:5000/
-# 接口上传图片：http://202.200.84.53:5000/upload_image
-# 接口获取jpg图片：http://202.200.84.53:5000/image/<string:filename>
-# 接口获取png图片：http://202.200.84.53:5000/show/<string:filename>
-# 接口下载图片：http://202.200.84.53:5000/download/<string:filename>
-# 接口人脸检测：http://202.200.84.53:5000/face_detect  form-data {"file": file}  (POST方式)
-# 接口人脸对比：http://202.200.84.53:5000/face_compare_detect  form-data {"img1_path": file1_path, "img2_path": file2_path}  (POST方式)
-# 接口作弊检测：http://202.200.84.53:5000/cheat_detect  form-data {"file": file}  (POST方式)
