@@ -1,6 +1,17 @@
 # 智能监考系统接口说明文档
 
+# 安装（Install）
+    
+    mkdir require
+    cd require
+    wget https://github.com/ultralytics/yolov5/blob/master/requirements.txt
+    pip install -r requirements.txt
+    pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
+    cd smart_exam   # 项目目录
+    pip install -r requirements.txt
+
 # 使用（Usage）
+
 ### 启动：
     conda activate py38
     cd /root/python/project/smart_exam/
