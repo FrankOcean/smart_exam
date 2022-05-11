@@ -22,7 +22,7 @@
     kill -9 123 #123 是进程 PID，此命令可杀掉 PID 为 123 的端口进程
 
 ## 3. 接口详情：
-### 3.1 BaseUrl = http://192.168.0.108:5000/            
+### 3.1 BaseUrl = http://124.70.177.168:5000/            
 ### 3.2 接口人脸检测：BaseUrl/face_detect  form-data {"file": file}  (POST方式)
     返回： 
     {
