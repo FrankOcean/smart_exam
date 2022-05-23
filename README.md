@@ -27,9 +27,18 @@
     返回： 
     {
     "code": "200",
-    "image_url": "http://124.70.177.168:5000/image/229dd23f-9662-46f3-a999-12d49a710ede.jpg",     # 原图
-    "image_url_detect": "http://124.70.177.168:5000/image/229dd23f-9662-46f3-a999-12d49a710ede_detect.jpg" # 检测结果
+    "result": "static/cb3f5f24-7490-4fd7-a1c7-04d222fcb458_result.txt"
     }
+    result格式：
+    {
+    'code': '200', 
+    'has_faces': '0', 
+    'mouth_state': '', 
+    'eye_state': '', 
+    'image_url_detect': 'cb3f5f24-7490-4fd7-a1c7-04d222fcb458_detect.jpg',    # 图片路径 BaseUrl/image/image_url_detect
+    'image_url': 'cb3f5f24-7490-4fd7-a1c7-04d222fcb458.jpg' # 图片路径 BaseUrl/image/image_url
+    }
+
 ### 3.3 接口人脸对比：BaseUrl/face_compare_detect  form-data {"img1_path": file1_path, "img2_path": file2_path}  (POST方式)
     返回：
     {
