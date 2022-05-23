@@ -101,5 +101,8 @@ def detect_faces(file_name, first_name, file_name_hz):
         cv2.putText(img, f'  eye  --> NULL', (15, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 3)
     # opencv 保存图片
     cv2.imencode('.jpg', img)[1].tofile("./static/image/{}_detect.jpg".format(first_name))
-    # return {"code": '200', "has_faces": has_faces, "mouth_state": mouth_state, "eye_state": eye_state, "image_url_detect": image_url + first_name + '_detect.jpg', "image_url": image_url + first_name + '.' + file_name_hz}
 
+    result = {"code": '200', "has_faces": has_faces, "mouth_state": mouth_state, "eye_state": eye_state, "image_url_detect":  first_name + '_detect.jpg', "image_url":  first_name + '.' + file_name_hz}
+    with open(os.path.join(RESULT_FOLDER, first_name + '_result.txt'), 'w') as f:
+        f.write(str(result))
+        print(result)

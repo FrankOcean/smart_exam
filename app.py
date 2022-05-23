@@ -143,15 +143,12 @@ def face_detect():
             t = threading.Thread(target=save_file, args=(normalExit,))
             t.start()
 
-            file_name_hz = secure_filename(f.filename).split('.')[-1]
-            return {"code": '200', "image_url_detect": image_url + first_name + '_detect.jpg',
-                    "image_url": image_url + first_name + '.' + file_name_hz}
+            return {"code": '200', "result": os.path.join(RESULT_FOLDER, first_name + '_result.txt')}
 
-            # return redirect(url_for('face_detect'))
         else:
             return "格式错误，仅支持jpg、png、jpeg格式文件"
     else:
-        return {}
+        return {"code": '500'}
 
 # 人脸对比
 @app.route("/face_compare_detect", methods=['POST', "GET"])
