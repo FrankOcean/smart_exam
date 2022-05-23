@@ -35,8 +35,8 @@
     'has_faces': '0', 
     'mouth_state': '', 
     'eye_state': '', 
-    'image_url_detect': 'image/cb3f5f24-7490-4fd7-a1c7-04d222fcb458_detect.jpg', 
-    'image_url': 'image/cb3f5f24-7490-4fd7-a1c7-04d222fcb458.jpg'
+    'image_url_detect': 'cb3f5f24-7490-4fd7-a1c7-04d222fcb458_detect.jpg',    # 图片路径 BaseUrl/image/image_url_detect
+    'image_url': 'cb3f5f24-7490-4fd7-a1c7-04d222fcb458.jpg' # 图片路径 BaseUrl/image/image_url
     }
 
 ### 3.3 接口人脸对比：BaseUrl/face_compare_detect  form-data {"img1_path": file1_path, "img2_path": file2_path}  (POST方式)
